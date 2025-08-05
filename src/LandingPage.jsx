@@ -59,17 +59,17 @@ export default function LandingPage() {
           <h2 className="text-4xl font-bold mb-14 text-blue-900 tracking-tight">What Makes Teachsuite Different?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="bg-white rounded-2xl shadow-lg p-8 border border-blue-100">
-              <img src="/icons/ready-to-use.png" alt="Ready-to-use lessons" className="mb-6 mx-auto w-16" />
+              <img src="/icons/ready_to_use_lessons.svg" alt="Ready-to-use lessons" className="mb-6 mx-auto w-16 h-16" />
               <h3 className="font-semibold text-2xl mb-3 text-blue-900">Ready-to-Use Lessons</h3>
               <p className="text-blue-800 text-lg">Get curated video content aligned to your school’s standards — no prep required.</p>
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-8 border border-blue-100">
-              <img src="/icons/insights.png" alt="Data-driven insights" className="mb-6 mx-auto w-16" />
+              <img src="/icons/data_driven_insights.svg" alt="Data-driven insights" className="mb-6 mx-auto w-16 h-16" />
               <h3 className="font-semibold text-2xl mb-3 text-blue-900">Data-Driven Insights</h3>
               <p className="text-blue-800 text-lg">Track student engagement and performance in real time.</p>
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-8 border border-blue-100">
-              <img src="/icons/seamless-delivery.png" alt="Seamless delivery" className="mb-6 mx-auto w-16" />
+              <img src="/icons/seamless_delivery.svg" alt="Seamless delivery" className="mb-6 mx-auto w-16 h-16" />
               <h3 className="font-semibold text-2xl mb-3 text-blue-900">Seamless Delivery</h3>
               <p className="text-blue-800 text-lg">Deliver content to students with one click — via LMS or direct link.</p>
             </div>
@@ -87,7 +87,7 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <K12Logo color="#fff" />
-            <span className="text-lg font-bold tracking-tight">TeachSuite</span>
+            <span className="text-lg font-bold tracking-tight text-white">TeachSuite</span>
           </div>
           <div className="text-center md:text-right">
             <p className="mb-1">© 2025 K12 Teachsuite. All rights reserved.</p>

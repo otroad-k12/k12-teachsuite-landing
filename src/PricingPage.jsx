@@ -32,7 +32,7 @@ export default function PricingPage() {
           <h2 className="text-4xl font-bold mb-14 text-blue-900 tracking-tight">Simple, Transparent Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="border border-blue-100 rounded-2xl p-8 shadow bg-white flex flex-col items-center">
-              <img src="/icons/ready-to-use.png" alt="Starter plan icon" className="mb-4 w-12 h-12" />
+              <img src="/icons/starter_icon.svg" alt="Starter plan icon" className="mb-4 w-12 h-12" />
               <h3 className="text-2xl font-semibold mb-4 text-blue-900">Starter</h3>
               <p className="text-4xl font-extrabold text-blue-700 mb-2">Free</p>
               <p className="mb-6 text-blue-600 text-lg">Try out core Teachsuite features with no commitment.</p>
@@ -44,7 +44,7 @@ export default function PricingPage() {
               <button className="bg-blue-600 text-white px-6 py-3 rounded-2xl w-full shadow-lg font-semibold text-lg hover:bg-blue-700 transition mt-auto">Start for Free</button>
             </div>
             <div className="border-4 border-blue-600 rounded-2xl p-8 shadow-lg bg-white flex flex-col items-center scale-105 z-10">
-              <img src="/icons/insights.png" alt="Pro plan icon" className="mb-4 w-12 h-12" />
+              <img src="/icons/pro_icon.svg" alt="Pro plan icon" className="mb-4 w-12 h-12" />
               <h3 className="text-2xl font-semibold mb-4 text-blue-900">Pro</h3>
               <p className="text-4xl font-extrabold text-blue-700 mb-2">$499<span className="text-lg font-normal">/year</span></p>
               <p className="mb-6 text-blue-600 text-lg">Ideal for classrooms and small teams looking to scale impact.</p>
@@ -56,7 +56,7 @@ export default function PricingPage() {
               <button className="bg-blue-600 text-white px-6 py-3 rounded-2xl w-full shadow-lg font-semibold text-lg hover:bg-blue-700 transition mt-auto">Buy Now</button>
             </div>
             <div className="border border-blue-100 rounded-2xl p-8 shadow bg-white flex flex-col items-center">
-              <img src="/icons/seamless-delivery.png" alt="District plan icon" className="mb-4 w-12 h-12" />
+              <img src="/icons/district_icon.svg" alt="District plan icon" className="mb-4 w-12 h-12" />
               <h3 className="text-2xl font-semibold mb-4 text-blue-900">District</h3>
               <p className="text-4xl font-extrabold text-blue-700 mb-2">Custom</p>
               <p className="mb-6 text-blue-600 text-lg">Get a tailored plan for your school or district’s needs.</p>
@@ -75,7 +75,7 @@ export default function PricingPage() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <K12Logo color="#fff" />
-            <span className="text-lg font-bold tracking-tight">TeachSuite</span>
+            <span className="text-lg font-bold tracking-tight"></span>
           </div>
           <div className="text-center md:text-right">
             <p className="mb-1">© 2025 K12 Teachsuite. All rights reserved.</p>
