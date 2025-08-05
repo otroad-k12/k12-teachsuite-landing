@@ -42,6 +42,23 @@ export default function PricingPage() {
           </nav>
         </div>
       </header>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-white py-20 px-6 md:px-12 lg:px-24 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-blue-900 tracking-tight">Plan faster,<br />Customize easier,<br />Teach better.</h1>
+            <p className="text-2xl font-semibold text-blue-700 mb-2">Try free for 10 days.</p>
+            <p className="mb-6 text-blue-900 text-lg">Create without limits! <span className="font-bold">$17.99/month</span>, cancel anytime</p>
+            <a href="https://k12teachsuite.com/sign-up" target="_blank" rel="noopener noreferrer">
+              <button className="bg-blue-600 text-white px-8 py-4 rounded-2xl shadow-lg font-semibold text-lg hover:bg-blue-700 transition">Start Your 10-Day Free Trial!</button>
+            </a>
+          </div>
+          <div className="flex justify-center md:justify-end">
+            <img src="/images/teacher-hero-illustration.png" alt="Teacher holding TEACH blocks" className="w-full max-w-md rounded-xl shadow-xl border border-blue-100 bg-yellow-100 p-4" />
+          </div>
+        </div>
+        <div className="absolute -top-10 -left-10 w-96 h-96 bg-blue-200 opacity-20 rounded-full z-0" />
+      </section>
       {/* Pricing Section */}
       <section className="py-20 px-6 md:px-12 lg:px-24">
         <div className="max-w-6xl mx-auto text-center">
