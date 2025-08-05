@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const K12Logo = ({ color = "#0035F0" }) => (
@@ -25,6 +25,8 @@ const K12Logo = ({ color = "#0035F0" }) => (
 );
 
 export default function PricingPage() {
+  const [annual, setAnnual] = useState(false);
+
   return (
     <main className="bg-blue-50 min-h-screen font-sans text-blue-900">
       {/* Header with logo and nav */}
@@ -49,6 +51,32 @@ export default function PricingPage() {
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-blue-900 tracking-tight">Plan faster,<br />Customize easier,<br />Teach better.</h1>
             <p className="text-2xl font-semibold text-blue-700 mb-2">Try free for 10 days.</p>
             <p className="mb-6 text-blue-900 text-lg">Create without limits! <span className="font-bold">$17.99/month</span>, cancel anytime</p>
+            <div className="flex items-center gap-4 mb-6">
+              <button
+                className={`px-5 py-2 rounded-xl font-semibold shadow transition border-2 border-blue-600 text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-400 ${!annual ? 'bg-blue-600 text-white' : ''}`}
+                onClick={() => setAnnual(false)}
+                style={{ minWidth: 110 }}
+              >
+                Monthly
+              </button>
+              <button
+                className={`px-5 py-2 rounded-xl font-semibold shadow transition border-2 border-blue-600 text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-400 ${annual ? 'bg-blue-600 text-white' : ''}`}
+                onClick={() => setAnnual(true)}
+                style={{ minWidth: 110 }}
+              >
+                Annual
+              </button>
+            </div>
+            <div className="mb-6">
+              {annual ? (
+                <p className="text-3xl font-extrabold text-blue-700 mb-1">$195<span className="text-lg font-normal">/year</span></p>
+              ) : (
+                <p className="text-3xl font-extrabold text-blue-700 mb-1">$17.99<span className="text-lg font-normal">/month</span></p>
+              )}
+              {annual && (
+                <p className="text-blue-600 text-sm">($214.50 - Save 10% for Annual)</p>
+              )}
+            </div>
             <a href="https://k12teachsuite.com/sign-up" target="_blank" rel="noopener noreferrer">
               <button className="bg-blue-600 text-white px-8 py-4 rounded-2xl shadow-lg font-semibold text-lg hover:bg-blue-700 transition">Start Your 10-Day Free Trial!</button>
             </a>
@@ -76,17 +104,18 @@ export default function PricingPage() {
               </ul>
               <button className="bg-blue-600 text-white px-6 py-3 rounded-2xl w-full shadow-lg font-semibold text-lg hover:bg-blue-700 transition mt-auto">Start for Free</button>
             </div>
-            <div className="border-4 border-blue-600 rounded-2xl p-8 shadow-lg bg-white flex flex-col items-center scale-105 z-10">
-              <img src="/icons/pro_icon.svg" alt="Pro plan icon" className="mb-4 w-12 h-12" />
-              <h3 className="text-2xl font-semibold mb-4 text-blue-900">Pro</h3>
-              <p className="text-4xl font-extrabold text-blue-700 mb-2">$499<span className="text-lg font-normal">/year</span></p>
-              <p className="mb-6 text-blue-600 text-lg">Ideal for classrooms and small teams looking to scale impact.</p>
-              <ul className="text-left space-y-3 text-blue-800 mb-6 text-base">
+            <div className="relative border-4 border-blue-600 rounded-2xl p-8 shadow-lg bg-gradient-to-br from-blue-100 via-blue-50 to-purple-100 flex flex-col items-center scale-105 z-10 overflow-hidden">
+              <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-blue-400 via-blue-200 to-purple-200 opacity-30 rounded-full z-0" />
+              <img src="/icons/pro_icon.svg" alt="Pro plan icon" className="mb-4 w-12 h-12 z-10 relative" />
+              <h3 className="text-2xl font-semibold mb-4 text-blue-900 z-10 relative">Pro</h3>
+              <p className="text-4xl font-extrabold text-blue-700 mb-2 z-10 relative">$499<span className="text-lg font-normal">/year</span></p>
+              <p className="mb-6 text-blue-600 text-lg z-10 relative">Ideal for classrooms and small teams looking to scale impact.</p>
+              <ul className="text-left space-y-3 text-blue-800 mb-6 text-base z-10 relative">
                 <li>✓ 100+ ready-to-use lessons</li>
                 <li>✓ Up to 10 teachers</li>
                 <li>✓ Progress tracking and insights</li>
               </ul>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-2xl w-full shadow-lg font-semibold text-lg hover:bg-blue-700 transition mt-auto">Buy Now</button>
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-2xl w-full shadow-lg font-semibold text-lg hover:bg-blue-700 transition mt-auto z-10 relative">Buy Now</button>
             </div>
             <div className="border border-blue-100 rounded-2xl p-8 shadow bg-white flex flex-col items-center">
               <img src="/icons/district_icon.svg" alt="District plan icon" className="mb-4 w-12 h-12" />
