@@ -34,7 +34,7 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4">
             <K12Logo />
-            <span className="text-2xl font-bold tracking-tight text-blue-900"></span>
+            <span className="text-2xl font-bold tracking-tight text-blue-900">TeachSuite</span>
           </div>
           <nav className="hidden md:flex gap-8 text-base font-medium">
             <Link to="/" className="hover:text-blue-600 transition">Home</Link>
@@ -51,32 +51,6 @@ export default function PricingPage() {
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-blue-900 tracking-tight">Plan faster,<br />Customize easier,<br />Teach better.</h1>
             <p className="text-2xl font-semibold text-blue-700 mb-2">Try free for 10 days.</p>
             <p className="mb-6 text-blue-900 text-lg">Create without limits! <span className="font-bold">$17.99/month</span>, cancel anytime</p>
-            <div className="flex items-center gap-4 mb-6">
-              <button
-                className={`px-5 py-2 rounded-xl font-semibold shadow transition border-2 border-blue-600 text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-400 ${!annual ? 'bg-blue-600 text-white' : ''}`}
-                onClick={() => setAnnual(false)}
-                style={{ minWidth: 110 }}
-              >
-                Monthly
-              </button>
-              <button
-                className={`px-5 py-2 rounded-xl font-semibold shadow transition border-2 border-blue-600 text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-400 ${annual ? 'bg-blue-600 text-white' : ''}`}
-                onClick={() => setAnnual(true)}
-                style={{ minWidth: 110 }}
-              >
-                Annual
-              </button>
-            </div>
-            <div className="mb-6">
-              {annual ? (
-                <p className="text-3xl font-extrabold text-blue-700 mb-1">$195<span className="text-lg font-normal">/year</span></p>
-              ) : (
-                <p className="text-3xl font-extrabold text-blue-700 mb-1">$17.99<span className="text-lg font-normal">/month</span></p>
-              )}
-              {annual && (
-                <p className="text-blue-600 text-sm">($214.50 - Save 10% for Annual)</p>
-              )}
-            </div>
             <a href="https://k12teachsuite.com/sign-up" target="_blank" rel="noopener noreferrer">
               <button className="bg-blue-600 text-white px-8 py-4 rounded-2xl shadow-lg font-semibold text-lg hover:bg-blue-700 transition">Start Your 10-Day Free Trial!</button>
             </a>
@@ -148,7 +122,7 @@ export default function PricingPage() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <K12Logo color="#fff" />
-            <span className="text-lg font-bold tracking-tight"></span>
+            <span className="text-lg font-bold tracking-tight">TeachSuite</span>
           </div>
           <div className="text-center md:text-right">
             <p className="mb-1">© 2025 K12 Teachsuite. All rights reserved.</p>
