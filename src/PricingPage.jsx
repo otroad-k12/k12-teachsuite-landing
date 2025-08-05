@@ -55,7 +55,7 @@ export default function PricingPage() {
             </a>
           </div>
           <div className="flex justify-center md:justify-end">
-            <img src="/images/teacher-hero-illustration.png" alt="Teacher holding TEACH blocks" className="w-full max-w-md rounded-xl shadow-xl border border-blue-100 bg-yellow-100 p-4" />
+            <img src="/images/teach-smile.png" alt="Teacher holding TEACH blocks" className="w-full max-w-md rounded-xl shadow-xl border border-blue-100 bg-yellow-100 p-4" />
           </div>
         </div>
         <div className="absolute -top-10 -left-10 w-96 h-96 bg-blue-200 opacity-20 rounded-full z-0" />
