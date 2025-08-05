@@ -34,7 +34,6 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4">
             <K12Logo />
-            <span className="text-2xl font-bold tracking-tight text-blue-900">TeachSuite</span>
           </div>
           <nav className="hidden md:flex gap-8 text-base font-medium">
             <Link to="/" className="hover:text-blue-600 transition">Home</Link>
@@ -122,7 +121,6 @@ export default function PricingPage() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <K12Logo color="#fff" />
-            <span className="text-lg font-bold tracking-tight">TeachSuite</span>
           </div>
           <div className="text-center md:text-right">
             <p className="mb-1">© 2025 K12 Teachsuite. All rights reserved.</p>
