@@ -37,6 +37,8 @@ export default function PricingPage() {
           <nav className="hidden md:flex gap-8 text-base font-medium">
             <Link to="/" className="hover:text-blue-600 transition">Home</Link>
             <Link to="/pricing" className="hover:text-blue-600 transition">Pricing</Link>
+            <a href="https://k12teachsuite.com/login" className="hover:text-blue-600 transition" target="_blank" rel="noopener noreferrer">Login</a>
+            <a href="https://k12teachsuite.com/sign-up" className="ml-2 bg-blue-600 text-white px-5 py-2 rounded-xl font-semibold shadow hover:bg-blue-700 transition" target="_blank" rel="noopener noreferrer">Sign Up</a>
           </nav>
         </div>
       </header>

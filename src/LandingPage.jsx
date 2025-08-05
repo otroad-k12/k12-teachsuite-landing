@@ -37,6 +37,8 @@ export default function LandingPage() {
           <nav className="hidden md:flex gap-8 text-base font-medium">
             <Link to="/" className="hover:text-blue-600 transition">Home</Link>
             <Link to="/pricing" className="hover:text-blue-600 transition">Pricing</Link>
+            <a href="https://k12teachsuite.com/login" className="hover:text-blue-600 transition" target="_blank" rel="noopener noreferrer">Login</a>
+            <a href="https://k12teachsuite.com/sign-up" className="ml-2 bg-blue-600 text-white px-5 py-2 rounded-xl font-semibold shadow hover:bg-blue-700 transition" target="_blank" rel="noopener noreferrer">Sign Up</a>
           </nav>
         </div>
       </header>
@@ -50,7 +52,9 @@ export default function LandingPage() {
               <Link to="/pricing">
                 <button className="bg-blue-600 text-white px-8 py-4 rounded-2xl shadow-lg font-semibold text-lg hover:bg-blue-700 transition">See Plans</button>
               </Link>
-              <button className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-2xl shadow-lg font-semibold text-lg hover:bg-yellow-300 transition">Try It Free</button>
+              <a href="https://k12teachsuite.com/sign-up" target="_blank" rel="noopener noreferrer">
+                <button className="bg-yellow-400 text-blue-900 px-8 py-4 rounded-2xl shadow-lg font-semibold text-lg hover:bg-yellow-300 transition">Try It Free</button>
+              </a>
             </div>
           </div>
           <div className="flex justify-center md:justify-end">
