@@ -25,7 +25,7 @@ const K12Logo = ({ color = "#0035F0" }) => (
 );
 
 export default function PricingPage() {
-  const [annual, setAnnual] = useState(false);
+  const [annual, setAnnual] = useState(true);
 
   return (
     <main className="bg-blue-50 min-h-screen font-sans text-blue-900">
@@ -92,42 +92,53 @@ export default function PricingPage() {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-14 text-blue-900 tracking-tight">Simple, Transparent Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Starter/Freemium */}
             <div className="border border-blue-100 rounded-2xl p-8 shadow bg-white flex flex-col items-center">
               <img src="/icons/starter_icon.svg" alt="Starter plan icon" className="mb-4 w-12 h-12" />
-              <h3 className="text-2xl font-semibold mb-4 text-blue-900">Starter</h3>
-              <p className="text-4xl font-extrabold text-blue-700 mb-2">Free</p>
-              <p className="mb-6 text-blue-600 text-lg">Try out core Teachsuite features with no commitment.</p>
-              <ul className="text-left space-y-3 text-blue-800 mb-6 text-base">
-                <li>✓ 5 pre-built lessons</li>
-                <li>✓ 1 teacher account</li>
-                <li>✓ Student preview link</li>
-              </ul>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-2xl w-full shadow-lg font-semibold text-lg hover:bg-blue-700 transition mt-auto">Start for Free</button>
+              <h3 className="text-2xl font-semibold mb-4 text-blue-900">Freemium</h3>
+              <p className="mb-2 text-blue-900 font-medium">Sign up for free to try premium features</p>
+              <p className="mb-6 text-blue-600 text-base">After 10 days, you'll continue with limited access to creation tools.</p>
+              <button className="border border-blue-500 text-blue-600 px-6 py-3 rounded-2xl w-full shadow font-semibold text-lg hover:bg-blue-50 transition mt-auto">Get Started For Free</button>
             </div>
-            <div className="relative border-4 border-blue-600 rounded-2xl p-8 shadow-lg bg-gradient-to-br from-blue-100 via-blue-50 to-purple-100 flex flex-col items-center scale-105 z-10 overflow-hidden">
-              <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-blue-400 via-blue-200 to-purple-200 opacity-30 rounded-full z-0" />
-              <img src="/icons/pro_icon.svg" alt="Pro plan icon" className="mb-4 w-12 h-12 z-10 relative" />
-              <h3 className="text-2xl font-semibold mb-4 text-blue-900 z-10 relative">Pro</h3>
-              <p className="text-4xl font-extrabold text-blue-700 mb-2 z-10 relative">$499<span className="text-lg font-normal">/year</span></p>
-              <p className="mb-6 text-blue-600 text-lg z-10 relative">Ideal for classrooms and small teams looking to scale impact.</p>
-              <ul className="text-left space-y-3 text-blue-800 mb-6 text-base z-10 relative">
-                <li>✓ 100+ ready-to-use lessons</li>
-                <li>✓ Up to 10 teachers</li>
-                <li>✓ Progress tracking and insights</li>
-              </ul>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-2xl w-full shadow-lg font-semibold text-lg hover:bg-blue-700 transition mt-auto z-10 relative">Buy Now</button>
+            {/* Premium/Pro */}
+            <div className="relative rounded-2xl p-8 shadow-lg flex flex-col items-center scale-105 z-10 overflow-hidden border-2 border-transparent bg-gradient-to-br from-[#F3EFFF] via-[#F6F8FF] to-[#E6F0FF]">
+              <div className="absolute inset-0 rounded-2xl border-2 border-[#A18AFF] pointer-events-none" style={{ boxShadow: '0 8px 32px 0 rgba(161,138,255,0.15)' }}></div>
+              <img src="/icons/pro_icon.svg" alt="Premium plan icon" className="mb-4 w-12 h-12 z-10 relative" />
+              <h3 className="text-2xl font-bold mb-4 text-[#A18AFF] z-10 relative">Premium</h3>
+              {/* Selector */}
+              <div className="flex justify-center gap-2 mb-4 z-10 relative">
+                <button
+                  className={`px-5 py-2 rounded-full font-semibold text-sm transition border-2 ${!annual ? 'bg-[#E6F0FF] text-blue-700 border-blue-400 shadow' : 'bg-white text-blue-400 border-transparent'}`}
+                  onClick={() => setAnnual(false)}
+                >
+                  Monthly
+                </button>
+                <button
+                  className={`px-5 py-2 rounded-full font-semibold text-sm transition border-2 ${annual ? 'bg-[#E6F0FF] text-blue-700 border-blue-400 shadow' : 'bg-white text-blue-400 border-transparent'}`}
+                  onClick={() => setAnnual(true)}
+                >
+                  Annual
+                </button>
+              </div>
+              {/* Pricing */}
+              <p className="text-3xl font-extrabold text-blue-900 mb-1 z-10 relative">
+                {annual ? "$195" : "$17.99"}
+                <span className="text-lg font-normal">{annual ? "/year" : "/month"}</span>
+              </p>
+              {annual && (
+                <p className="text-blue-600 text-sm mb-2">($214.50 - Save 10% for Annual)</p>
+              )}
+              <p className="mb-6 text-blue-700 text-base z-10 relative">For Educators and Creators who want unlimited creations!<br />Access to all tools!</p>
+              <button className="bg-gradient-to-r from-[#A18AFF] to-[#6F7CFF] text-white px-6 py-3 rounded-2xl w-full shadow-lg font-semibold text-lg hover:opacity-90 transition mt-auto z-10 relative">
+                {annual ? "Upgrade To Yearly" : "Upgrade To Monthly"}
+              </button>
             </div>
+            {/* School License/District */}
             <div className="border border-blue-100 rounded-2xl p-8 shadow bg-white flex flex-col items-center">
-              <img src="/icons/district_icon.svg" alt="District plan icon" className="mb-4 w-12 h-12" />
-              <h3 className="text-2xl font-semibold mb-4 text-blue-900">District</h3>
-              <p className="text-4xl font-extrabold text-blue-700 mb-2">Custom</p>
-              <p className="mb-6 text-blue-600 text-lg">Get a tailored plan for your school or district’s needs.</p>
-              <ul className="text-left space-y-3 text-blue-800 mb-6 text-base">
-                <li>✓ Unlimited teachers</li>
-                <li>✓ Full content library</li>
-                <li>✓ Admin tools & onboarding</li>
-              </ul>
-              <button className="bg-yellow-400 text-blue-900 px-6 py-3 rounded-2xl w-full shadow-lg font-semibold text-lg hover:bg-yellow-300 transition mt-auto">Contact Sales</button>
+              <img src="/icons/district_icon.svg" alt="School License plan icon" className="mb-4 w-12 h-12" />
+              <h3 className="text-2xl font-semibold mb-4 text-blue-900">School License</h3>
+              <p className="mb-6 text-blue-600 text-base">We offer school or district pricing!<br />Reach out to us to learn more!</p>
+              <button className="border border-blue-500 text-blue-600 px-6 py-3 rounded-2xl w-full shadow font-semibold text-lg hover:bg-blue-50 transition mt-auto">Contact Us</button>
             </div>
           </div>
         </div>
