@@ -45,7 +45,9 @@ export default function PricingPage() {
       </header>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-20 px-6 md:px-12 lg:px-24 border-b border-blue-100">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        {/* Light blue circle background, placed behind content */}
+        <div className="absolute -top-24 -left-32 w-[600px] h-[600px] bg-blue-100 opacity-60 rounded-full z-0" />
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
           <div>
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-blue-900 tracking-tight">Plan faster,<br />Customize easier,<br />Teach better.</h1>
             <p className="text-2xl font-semibold text-blue-700 mb-2">Try free for 10 days.</p>
@@ -55,10 +57,9 @@ export default function PricingPage() {
             </a>
           </div>
           <div className="flex justify-center md:justify-end">
-            <img src="/images/teach-smile.png" alt="Teacher holding TEACH blocks" className="w-full max-w-md rounded-xl shadow-xl border border-blue-100 bg-yellow-100 p-4" />
+            <img src="/images/teach-smile.png" alt="Teacher holding TEACH blocks" className="w-full max-w-lg rounded-xl shadow-xl bg-yellow-100 p-4 scale-105 md:scale-110" />
           </div>
         </div>
-        <div className="absolute -top-10 -left-10 w-96 h-96 bg-blue-200 opacity-20 rounded-full z-0" />
       </section>
       {/* Pricing Section */}
       <section className="py-20 px-6 md:px-12 lg:px-24">
