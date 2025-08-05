@@ -59,7 +59,7 @@ export default function LandingPage() {
           </div>
           <div className="flex justify-center md:justify-end">
             <video
-              className="w-full max-w-md rounded-xl shadow-xl border border-blue-100"
+              className="w-full max-w-md rounded-xl shadow-xl border border-blue-100 bg-yellow-100 p-4"
               controls
               poster="/images/teacher-hero-illustration.png"
               aria-label="K12 TeachSuite testimonial video"
