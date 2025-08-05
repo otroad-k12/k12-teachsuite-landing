@@ -18,7 +18,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4">
             <K12Logo />
-            <span className="text-2xl font-bold tracking-tight text-blue-900">TeachSuite</span>
+            <span className="text-2xl font-bold tracking-tight text-blue-900"></span>
           </div>
           <nav className="hidden md:flex gap-8 text-base font-medium">
             <Link to="/" className="hover:text-blue-600 transition">Home</Link>
