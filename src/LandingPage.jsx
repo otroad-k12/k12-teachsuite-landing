@@ -24,6 +24,27 @@ const K12Logo = ({ color = "#0035F0" }) => (
   </span>
 );
 
+const features = [
+  {
+    icon: "/icons/ready_to_use_lessons.svg",
+    alt: "Ready-to-use lessons",
+    title: "Ready-to-Use Lessons",
+    text: "Get curated video content aligned to your school’s standards — no prep required."
+  },
+  {
+    icon: "/icons/data_driven_insights.svg",
+    alt: "Data-driven insights",
+    title: "Data-Driven Insights",
+    text: "Track student engagement and performance in real time."
+  },
+  {
+    icon: "/icons/seamless_delivery.svg",
+    alt: "Seamless delivery",
+    title: "Seamless Delivery",
+    text: "Deliver content to students with one click — via LMS or direct link."
+  }
+];
+
 export default function LandingPage() {
   return (
     <main className="bg-blue-50 min-h-screen font-sans text-blue-900">
@@ -77,21 +98,13 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-14 text-blue-900 tracking-tight">What Makes Teachsuite Different?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-blue-100">
-              <img src="/icons/ready_to_use_lessons.svg" alt="Ready-to-use lessons" className="mb-6 mx-auto w-16 h-16" />
-              <h3 className="font-semibold text-2xl mb-3 text-blue-900">Ready-to-Use Lessons</h3>
-              <p className="text-blue-800 text-lg">Get curated video content aligned to your school’s standards — no prep required.</p>
-            </div>
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-blue-100">
-              <img src="/icons/data_driven_insights.svg" alt="Data-driven insights" className="mb-6 mx-auto w-16 h-16" />
-              <h3 className="font-semibold text-2xl mb-3 text-blue-900">Data-Driven Insights</h3>
-              <p className="text-blue-800 text-lg">Track student engagement and performance in real time.</p>
-            </div>
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-blue-100">
-              <img src="/icons/seamless_delivery.svg" alt="Seamless delivery" className="mb-6 mx-auto w-16 h-16" />
-              <h3 className="font-semibold text-2xl mb-3 text-blue-900">Seamless Delivery</h3>
-              <p className="text-blue-800 text-lg">Deliver content to students with one click — via LMS or direct link.</p>
-            </div>
+            {features.map((feature, idx) => (
+              <div key={feature.title} className="bg-white rounded-2xl shadow-lg p-8 border border-blue-100">
+                <img src={feature.icon} alt={feature.alt} className="mb-6 mx-auto w-16 h-16" loading="lazy" />
+                <h3 className="font-semibold text-2xl mb-3 text-blue-900">{feature.title}</h3>
+                <p className="text-blue-800 text-lg">{feature.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
